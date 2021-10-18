@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {React,useState,useEffect} from 'react';
 import Header from "../partials/Header"
+import Album from './Album';
 const Artist=(props)=>
 {
     const [artist, setState] = useState([])
@@ -32,7 +33,7 @@ const Artist=(props)=>
                         }
                     </div>
                 </div>
-
+            <Album artistAlbum={artist.albums}/>
             </div>
         </div>
     )
